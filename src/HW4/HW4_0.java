@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class HW4_0 {
     public static void main(String[] args) {
-        get2Array();
+        getRandomNumbers();
     }
 
     public static void getTheSameNumbers() {
@@ -48,30 +48,28 @@ public class HW4_0 {
     public static void getRandomNumbers() {
         System.out.print("Please, enter your number: ");
         int massLengh = input().nextInt();
-        double[] mass = new double[massLengh];
+        int[] mass = new int[massLengh];
 
         for(int i = 0; i < mass.length; ++i) {
-            mass[i] = Math.random() * (double)10.0F;
-            mass[i] = (double)Math.round(mass[i]);
+            mass[i] = (int) (Math.random() * 10);
         }
 
         System.out.print("Array: ");
 
-        for(double el : mass) {
+        for(int el : mass) {
             System.out.print(el + "\t");
         }
 
         System.out.println();
-        double avg = 0.0F;
+        int avg = 0;
 
         for(int i = 0; i < mass.length; ++i) {
             avg += mass[i];
         }
 
         avg /= massLengh;
-        avg = (double)Math.round(avg);
         System.out.println("Avarage: " + avg);
-        double min = mass[0];
+        int min = mass[0];
 
         for(int i = 0; i < mass.length; ++i) {
             if (min >= mass[i]) {
@@ -80,7 +78,7 @@ public class HW4_0 {
         }
 
         System.out.println("Minimum: " + min);
-        double max = mass[0];
+        int max = mass[0];
 
         for(int i = 0; i < mass.length; ++i) {
             if (max <= mass[i]) {
