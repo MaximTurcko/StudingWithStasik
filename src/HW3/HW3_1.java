@@ -3,14 +3,14 @@ import java.util.Scanner;
 
 public class HW3_1 {
     public static void main(String[] args) {
-        getDz3_1();
+        getTimeYear();
         //getDz3_2();
         //getDz3_3();
         //getDz3_4();
     }
 
 
-    public static void getDz3_1() {
+    public static void getTimeYear() {
         System.out.print("Please enter number time of year from 1 to 12: ");
         int month = input().nextInt();
         if (month == 12 || month == 1 || month == 2) {
@@ -26,7 +26,7 @@ public class HW3_1 {
         }
     }
 
-    public static void getDz3_2() {
+    public static void getTimeYearCase() {
         System.out.print("Please enter number time of year from 1 to 12: ");
         int month = input().nextInt();
         switch (month) {
@@ -56,7 +56,7 @@ public class HW3_1 {
 
     }
 
-    public static void getDz3_3() {
+    public static void getRemainder () {
         System.out.println("Please enter your number. Ill show you your result: ");
         int number = input().nextInt();
         int number1 = number % 2;
@@ -66,7 +66,7 @@ public class HW3_1 {
 
     }
 
-    public static void getDz3_4() {
+    public static void getTepm() {
         System.out.print("please enter temperature: ");
         int t = input().nextInt();
         if (t > -5) {
