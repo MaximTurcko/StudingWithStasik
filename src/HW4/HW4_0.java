@@ -7,7 +7,7 @@ public class HW4_0 {
         get2Array();
     }
 
-    public static void getDz4_1() {
+    public static void getTheSameNumbers() {
         System.out.println("Please, enter your number: ");
         int[] mass = new int[]{1, 4, 8, 7, 5};
         int numner = input().nextInt();
@@ -23,30 +23,29 @@ public class HW4_0 {
         System.out.println("Нет пробития!");
     }
 
-    public static void getDz4_2() {
+    public static void getTheSameV2() {
         System.out.print("Please, enter your number: ");
         int[] mass = new int[]{1, 5, 8, 7, 5};
-        int numner = input().nextInt();
-        boolean no = true;
+        int number = input().nextInt();
+        boolean theSame = true;
 
         for(int index = 0; index < mass.length; ++index) {
-            if (numner == mass[index]) {
+            if (number == mass[index]) {
                 mass[index] = 0;
-                no = false;
+                theSame = false;
             }
         }
 
-        if (no) {
-            System.out.println("Нет пробитий!");
-        } else {
+        if (theSame) {
             for(int index = 0; index < mass.length; ++index) {
                 System.out.print(mass[index] + "\t");
             }
-
+        } else {
+            System.out.println("Нет пробитий!");
         }
     }
 
-    public static void getDz4_3() {
+    public static void getRandomNumbers() {
         System.out.print("Please, enter your number: ");
         int massLengh = input().nextInt();
         double[] mass = new double[massLengh];
@@ -63,13 +62,13 @@ public class HW4_0 {
         }
 
         System.out.println();
-        double avg = (double)0.0F;
+        double avg = 0.0F;
 
         for(int i = 0; i < mass.length; ++i) {
             avg += mass[i];
         }
 
-        avg /= (double)massLengh;
+        avg /= massLengh;
         avg = (double)Math.round(avg);
         System.out.println("Avarage: " + avg);
         double min = mass[0];
