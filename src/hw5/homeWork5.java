@@ -13,7 +13,6 @@ public class homeWork5 {
             {7, 8, 9}
         };
 
-        int sum = 0;
         for (int outer = 0; outer < array.length; outer++) {
             for (int inner = 0; inner < array[outer].length; inner++) {
                 for (int i = 0; i < array.length-1; i++) {
@@ -22,7 +21,7 @@ public class homeWork5 {
                             // Меняем arraytest[j] и arraytest[j+1]
                             int temp = array[outer][j];
                             array[outer][j] = array[outer][j + 1];
-                            array[outer][j + 1] = sum;
+                            array[outer][j + 1] = temp;
                         }
                     }
                 }
