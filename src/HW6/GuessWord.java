@@ -13,8 +13,10 @@ public class GuessWord {
         if (playGame()){
             System.out.println("LETS PLAY GAME!");
             getInstructions();
-            String hiddenWord = getRandomWord(words());
+            char[] hiddenWord = getRandomWord(words()).toCharArray();
             System.out.println(hiddenWord);
+            System.out.println(hiddenWord[1]);
+
         } else {
             System.out.println("\nYou said NO. GOOODBYEEE!".toUpperCase());
         }
