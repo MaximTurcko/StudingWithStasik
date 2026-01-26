@@ -45,6 +45,7 @@ public class GuessWord {
                             for (char el : hiddenWord) {
                                 System.out.print(el);
                             }
+                            break;
                         } else System.out.println("You NOT to guess the WORD");
                     }
                     int counter = 0;
@@ -59,12 +60,11 @@ public class GuessWord {
                     }
                     System.out.println();
                 } while (oneMoreTime);
-                System.out.print("YOU HAVE WON! The WORD  was be: ");
+                System.out.println("YOU HAVE WON! The WORD  was be: ");
                 for (char el : hiddenWord) {
                     System.out.print(el);
                 }
-                System.out.println("Do you want to play again?");
-                playGame();
+                System.out.println();
             } while (playGame());
         } else {
             System.out.println("\nYou said NO. GOOODBYEEE!".toUpperCase());
