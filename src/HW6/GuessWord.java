@@ -32,7 +32,7 @@ public class GuessWord {
                         guessWord[i] = inputChar;
                     } else guessWord[i] ='*';
                 }
-
+                printGuessWord();
 
             } else if (input.length() > 1) {
                 if (String.valueOf(hiddenWord).equalsIgnoreCase(input)) {
@@ -84,7 +84,9 @@ public class GuessWord {
     }
 
     public static void printGuessWord(){
-        for(el : guessWord)
+        for (int el : guessWord){
+            System.out.print(el + "\t");
+        }
     }
 
     public static Scanner input() {
