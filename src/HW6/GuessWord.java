@@ -13,59 +13,63 @@ public class GuessWord {
         if (playGame()) {
             System.out.println("LETS PLAY GAME!");
             getInstructions();
-            char[] hiddenWord = getRandomWord(words()).toCharArray();
-            System.out.println(hiddenWord);
-            char[] guessWord = new char[hiddenWord.length];
-            for (int i = 0; i < guessWord.length; i++) {
-                guessWord[i] = '*';
-            }
-            boolean complite = false;
-            int counter = 0;
             do {
-                System.out.print("Write the Letter or WORD: ");
-                String input = input().nextLine();
-                while (input.length() == 0) {
-                    System.out.println("You Wrote nothing. Please, try again");
-                    input = input().nextLine();
-                }
-                if (input.length() == 1) {
-                    char inputChar = input.charAt(0);
-                    for (int i = 0; i < hiddenWord.length; i++) {
-                        if (hiddenWord[i] == inputChar) {
-                            guessWord[i] = inputChar;
-                        }
-                    }
-                    for (char el : guessWord) {
-                        System.out.print(el + "\t");
-                    }
-
-                } else if (input.length() > 1) {
-                    if (String.valueOf(hiddenWord).equalsIgnoreCase(input)) {
-                        System.out.print("YOU HAVE WON! The WORD  was be: ");
-                        for (char el : hiddenWord) {
-                            System.out.print(el);
-                        }
-                        return;
-                    } else System.out.println("You NOT to guess the WORD");
-                }
+                char[] hiddenWord = getRandomWord(words()).toCharArray();
+                System.out.println(hiddenWord);
+                char[] guessWord = new char[hiddenWord.length];
                 for (int i = 0; i < guessWord.length; i++) {
-                    if (guessWord[i] == '*') {
-                        complite = true;
-                        break;
-                    }
+                    guessWord[i] = '*';
                 }
-                counter++;
-                System.out.println();
-            } while (complite && counter < guessWord.length);
-            System.out.print("YOU HAVE WON! The WORD  was be: ");
-            for (char el : hiddenWord) {
-                System.out.print(el);
-            }
+                boolean oneMoreTime = false;
+                do {
+                    System.out.print("Write the Letter or WORD: ");
+                    String input = input().nextLine();
+                    while (input.length() == 0) {
+                        System.out.println("You Wrote nothing. Please, try again");
+                        input = input().nextLine();
+                    }
+                    if (input.length() == 1) {
+                        char inputChar = input.charAt(0);
+                        for (int i = 0; i < hiddenWord.length; i++) {
+                            if (hiddenWord[i] == inputChar) {
+                                guessWord[i] = inputChar;
+                            }
+                        }
+                        for (char el : guessWord) {
+                            System.out.print(el + "\t");
+                        }
 
-
+                    } else if (input.length() > 1) {
+                        if (String.valueOf(hiddenWord).equalsIgnoreCase(input)) {
+                            System.out.print("YOU HAVE WON! The WORD  was be: ");
+                            for (char el : hiddenWord) {
+                                System.out.print(el);
+                            }
+                        } else System.out.println("You NOT to guess the WORD");
+                    }
+                    int counter = 0;
+                    for (int i = 0; i < guessWord.length; i++) {
+                        if (guessWord[i] == '*') {
+                            oneMoreTime = true;
+                            break;
+                        } else counter++;
+                    }
+                    if(counter == guessWord.length){
+                        oneMoreTime = false;
+                    }
+                    System.out.println();
+                } while (oneMoreTime);
+                System.out.print("YOU HAVE WON! The WORD  was be: ");
+                for (char el : hiddenWord) {
+                    System.out.print(el);
+                }
+                System.out.println("Do you want to play again?");
+                playGame();
+            } while (playGame());
         } else {
             System.out.println("\nYou said NO. GOOODBYEEE!".toUpperCase());
         }
+
 
     }
 
