@@ -15,31 +15,53 @@ public class GuessWord {
             getInstructions();
             char[] hiddenWord = getRandomWord(words()).toCharArray();
             System.out.println(hiddenWord);
-            System.out.print("Write the Letter or WORD: ");
-            String input = input().nextLine();
             char[] guessWord = new char[hiddenWord.length];
             for (int i = 0; i < guessWord.length; i++) {
-                guessWord[i] = hiddenWord[i];
+                guessWord[i] = '*';
             }
-            while (input.length() == 0) {
-                System.out.println("You Wrote nothing. Please, try again");
-                input = input().nextLine();
-            }
-            if (input.length() == 1) {
-                char  inputChar = input.charAt(0);
-                for (int i = 0; i < hiddenWord.length; i++) {
-                    if(hiddenWord[i] == inputChar){
-                        guessWord[i] = inputChar;
-                    } else guessWord[i] ='*';
+            boolean complite = false;
+            int counter = 0;
+            do {
+                System.out.print("Write the Letter or WORD: ");
+                String input = input().nextLine();
+                while (input.length() == 0) {
+                    System.out.println("You Wrote nothing. Please, try again");
+                    input = input().nextLine();
                 }
-                printGuessWord();
+                if (input.length() == 1) {
+                    char inputChar = input.charAt(0);
+                    for (int i = 0; i < hiddenWord.length; i++) {
+                        if (hiddenWord[i] == inputChar) {
+                            guessWord[i] = inputChar;
+                        }
+                    }
+                    for (char el : guessWord) {
+                        System.out.print(el + "\t");
+                    }
 
-            } else if (input.length() > 1) {
-                if (String.valueOf(hiddenWord).equalsIgnoreCase(input)) {
-                    System.out.println("YOU HAVE WON!");
-                    return;
-                } else System.out.println("You NOT to guess the WORD");
+                } else if (input.length() > 1) {
+                    if (String.valueOf(hiddenWord).equalsIgnoreCase(input)) {
+                        System.out.print("YOU HAVE WON! The WORD  was be: ");
+                        for (char el : hiddenWord) {
+                            System.out.print(el);
+                        }
+                        return;
+                    } else System.out.println("You NOT to guess the WORD");
+                }
+                for (int i = 0; i < guessWord.length; i++) {
+                    if (guessWord[i] == '*') {
+                        complite = true;
+                        break;
+                    }
+                }
+                counter++;
+                System.out.println();
+            } while (complite && counter < guessWord.length);
+            System.out.print("YOU HAVE WON! The WORD  was be: ");
+            for (char el : hiddenWord) {
+                System.out.print(el);
             }
+
 
         } else {
             System.out.println("\nYou said NO. GOOODBYEEE!".toUpperCase());
@@ -50,8 +72,6 @@ public class GuessWord {
     public static boolean playGame() {
         System.out.println("Would you want to play? Press 'y' to continue");
         return input().nextLine().equalsIgnoreCase("y");
-
-
     }
 
     public static void getIntrductoryMsg() {
@@ -83,10 +103,10 @@ public class GuessWord {
         return hiddenWord[new Random().nextInt(0, hiddenWord.length)];
     }
 
-    public static void printGuessWord(){
-        for (int el : guessWord){
-            System.out.print(el + "\t");
-        }
+    public static void printGuessWord() {
+        //for (int el : guessWord){
+        //    System.out.print(el + "\t");
+        //}
     }
 
     public static Scanner input() {
