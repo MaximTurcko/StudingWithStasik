@@ -4,7 +4,30 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        selectCard();
+        //selectCard();
+        depositToAccountCard4();
+        depositToAccountCard5();
+        withdrawFromAccount();
+
+    }
+
+    public static void depositToAccountCard4(){
+        CreditCard card4 = new CreditCard();
+        System.out.print("Please, enter Your deposit: ");
+        card4.numberOfCard = 4;
+        card4.depositToCard(input().nextInt());
+    }
+    public static void depositToAccountCard5(){
+        CreditCard card5 = new CreditCard();
+        System.out.print("Please, enter Your deposit: ");
+        card5.numberOfCard = 5;
+        card5.depositToCard(input().nextInt());
+    }
+    public static void withdrawFromAccount(){
+        CreditCard card5 = new CreditCard();
+        System.out.print("Please, enter Your value to withdraw: ");
+        card5.numberOfCard = 6;
+        card5.withdrewMoneyFromCard(input().nextInt());
     }
 
     public static void selectCard(){
@@ -23,9 +46,11 @@ public class Main {
         }
     }
 
+
+
     public static void withdrawMoneyFromCard1(){
         CreditCard card1 = new CreditCard();
-        card1.numberOfAccaunt = 1;
+        card1.numberOfCard = 1;
         card1.moneyOfAccount = 100500;
         System.out.println("******************************");
         card1.getCardInfo();
@@ -41,7 +66,7 @@ public class Main {
     }
     public static void withdrawMoneyFromCard2(){
         CreditCard card2 = new CreditCard();
-        card2.numberOfAccaunt = 2;
+        card2.numberOfCard = 2;
         card2.moneyOfAccount = 100;
         System.out.println("******************************");
         card2.getCardInfo();
@@ -57,7 +82,7 @@ public class Main {
     }
     public static void withdrawMoneyFromCard3(){
         CreditCard card3 = new CreditCard();
-        card3.numberOfAccaunt = 3;
+        card3.numberOfCard = 3;
         card3.moneyOfAccount = 500;
         System.out.println("******************************");
         card3.getCardInfo();
