@@ -15,7 +15,6 @@ public class GuessWord {
             getInstructions();
             do {
                 gameEngine();
-                anotherGame();
             } while (anotherGame());
         } else {
             System.out.println("\nYou said NO. GOOODBYEEE!".toUpperCase());
@@ -59,6 +58,11 @@ public class GuessWord {
             }
         }
         return true;
+    }
+
+    public static boolean anotherGame(){
+        System.out.println("Would you want to play again? Press 'y' to continue");
+        return input().nextLine().equalsIgnoreCase("y");
     }
 
     public static boolean playGame() {
