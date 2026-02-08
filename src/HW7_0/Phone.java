@@ -1,4 +1,4 @@
-package HW7;
+package HW7_0;
 
 public class Phone {
     private int number;
