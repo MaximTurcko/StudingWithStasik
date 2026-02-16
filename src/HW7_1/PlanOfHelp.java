@@ -14,6 +14,6 @@ public class PlanOfHelp {
 
     @Override
     public String toString() {
-        return String.format("%d", getCodeOfHelp()) ;
+        return String.format("%d", getCodeOfHelp());
     }
 }

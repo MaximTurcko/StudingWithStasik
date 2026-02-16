@@ -1,36 +1,24 @@
 package HW7_1;
 
 public class Clinica {
-    private Hirurg hirurg;
-    private Dantist dantist;
-    private Therapevt therapevt;
-    private Pacient pacient;
+    private Doctor[] doctors;
 
-    public Clinica(Hirurg hirurg, Dantist dantist, Therapevt therapevt,
-                   Pacient pacient) {
-        this.hirurg = hirurg;
-        this.dantist = dantist;
-        this.therapevt = therapevt;
-        this.pacient = pacient;
+    public Clinica(Doctor... doctors) {
+        this.doctors = doctors;
     }
 
-    @Override
-    public String toString() {
-        return "My Clinica consist from: \n" +
-                "\t" + this.hirurg + "\n" +
-                "\t" + this.dantist + "\n" +
-                "\t" + this.therapevt + "\n" +
-                "\t" + this.pacient;
-    }
-
-    public Hirurg getHirurg(){
-        return hirurg;
-    }
-    public String checkAndHelp(){
-        if(hirurg.getCodeOfDoctor() == pacient.getNameCodeOfPacient()){
-            return hirurg.help();
-        } else if(dantist.getCodeOfDoctor() == pacient.getNameCodeOfPacient()){
-            return dantist.help();
-        } else return therapevt.help();
+    public String checkAndHelp(Pacient pacient) {
+        int codeOfPacient;
+        if (pacient.getNameCodeOfPacient() != 1 && pacient.getNameCodeOfPacient() != 2){
+            codeOfPacient = 3;
+        } else {
+            codeOfPacient = pacient.getNameCodeOfPacient();
+        }
+        for (int i = 0; i < doctors.length; i++) {
+            if (doctors[i].getCodeOfDoctor() == codeOfPacient) {
+                return doctors[i].help();
+            }
+        }
+        return "Hernya";
     }
 }
