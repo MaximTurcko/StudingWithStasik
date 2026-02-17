@@ -1,8 +1,8 @@
 package HW8_1;
 
 public abstract class Figure {
-    private int length;
-    private int height;
+    protected int length;
+    protected int height;
     public abstract void calculateArea();
     public abstract void
     calculatePerimeter();

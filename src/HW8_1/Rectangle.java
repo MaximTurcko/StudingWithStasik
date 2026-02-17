@@ -7,7 +7,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void calculateArea() {
-        System.out.println("Area of Rectangle is :" + (length + height)*2);
+        System.out.println("Area of Rectangle is :" + (this.length + height)*2);
     }
 
     @Override
