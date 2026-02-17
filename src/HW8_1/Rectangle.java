@@ -1,8 +1,11 @@
 package HW8_1;
 
 public class Rectangle extends Figure {
+    protected int length;
+    protected int height;
     public Rectangle(int length, int  height){
-        super(length, height);
+       this.length = length;
+       this.height = height;
     }
 
     @Override
