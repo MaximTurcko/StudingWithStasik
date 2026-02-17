@@ -2,7 +2,12 @@ package HW8_1;
 
 public class Main {
     public static void main(String[] args) {
-        Figure[] rectangle = (new Rectangle(12,10),
+        Figure figure = new Figure[]{
+                new Rectangle(10,12),
+                new Triangle(10,12,13),
+                new Circle(10)
+        };
+
 
         );
         rectangle.getcalculatePerimeter();
