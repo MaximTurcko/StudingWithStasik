@@ -8,14 +8,14 @@ public class Triangle extends Rectangle{
     }
 
     @Override
-    public void calculateArea() {
+    public int getcalculateArea() {
         System.out.println("Area of Triangle is :" + (length + height)/2);
-
+        return (length + height)/2;
     }
 
     @Override
-    public void calculatePerimeter() {
+    public int getcalculatePerimeter() {
         System.out.println("Perimeter of Rectangle is :" + this.length + height + hypotenuse);
-
+        return this.length + height + hypotenuse;
     }
 }

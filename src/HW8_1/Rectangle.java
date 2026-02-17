@@ -9,13 +9,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void calculateArea() {
-        System.out.println("Area of Rectangle is :" + (this.length + height)*2);
+    public int getcalculateArea() {
+        System.out.println("Area of Rectangle is :" + length * height);
+        return length * height;
     }
 
     @Override
-    public void calculatePerimeter() {
-        System.out.println("Area of Rectangle is :" + (length + height)*2);
-
+    public int getcalculatePerimeter() {
+        System.out.println("Perimeter of Rectangle is :" + (this.length + height)*2);
+        return (this.length + height)*2;
     }
 }
