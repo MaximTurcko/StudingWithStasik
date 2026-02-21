@@ -9,13 +9,13 @@ public class Circle extends Figure{
 
     @Override
     public int getcalculatePerimeter() {
-        System.out.println("Perimeter of Rectangle is :" + this.radius*2*3);
+        System.out.println("Perimeter of Circle is: " + this.radius*2*3);
         return this.radius*2*3;
     }
 
     @Override
     public int getcalculateArea() {
-        System.out.println("Area of Rectangle is :" + this.radius*2*2*3);
+        System.out.println("Area of Circle is: " + this.radius*2*2*3);
         return this.radius*2*2*3;
     }
 }
