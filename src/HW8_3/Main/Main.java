@@ -9,7 +9,9 @@ import java.util.Date;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Register goods1 = new Goods(1,new Date(),"Шмот",100500);
+        Register[] goods1 = new Goods(1, new Date(), "Шмот", 100500),
+
+        ;
         System.out.println(goods1.getInfo());
     }
 }

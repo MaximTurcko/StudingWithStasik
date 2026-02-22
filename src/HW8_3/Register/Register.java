@@ -16,5 +16,7 @@ public abstract class Register implements IRegister {
 
     ;
 
-    public abstract String getInfo();
+    public String getInfo(){
+
+    }
 }
