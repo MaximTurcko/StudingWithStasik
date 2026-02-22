@@ -1,10 +1,10 @@
 package HW8_3.FinancialInvoice;
 
-import HW8_3.Register.Register;
+import HW8_3.Documents.Documents;
 
 import java.util.Date;
 
-public class FinancialInvoice extends Register {
+public class FinancialInvoice extends Documents {
     private final int monthluTotal;
     private final int departmentsCode;
 
@@ -13,8 +13,8 @@ public class FinancialInvoice extends Register {
         this.monthluTotal = monthluTotal;
         this.departmentsCode = departmentsCode;
     }
+    public FinancialInvoice(){}
 
-    @Override
     public String getInfo() {
         return "FinancialInvoice!";
     }

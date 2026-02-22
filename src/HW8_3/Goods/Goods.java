@@ -1,10 +1,11 @@
 package HW8_3.Goods;
 
-import HW8_3.Register.Register;
+import HW8_3.Documents.Documents;
+import HW8_3.Register.IRegister;
 
 import java.util.Date;
 
-public class Goods extends Register {
+public class Goods extends Documents  {
     private String tipe;
     private int quantity;
 
@@ -13,8 +14,8 @@ public class Goods extends Register {
         this.tipe = tipe;
         this.quantity = quantity;
     }
+    public Goods(){}
 
-    @Override
     public String getInfo() {
         return tipe + " " + quantity + " " + date + " " + number;
     }
