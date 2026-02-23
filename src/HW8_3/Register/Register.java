@@ -5,17 +5,29 @@ import HW8_3.Documents.Documents;
 import java.util.Date;
 
 public class Register implements IRegister {
-    private Documents[] documents;
+    public Documents[] documents = new Documents[10];
+    private int counter = 0;
 
-    public Register(Documents... documents){
-        this.documents = documents;
-    }
-
-    public void saveTheDocument(Documents... documents) {
+    public Register(){
 
     }
 
-    public String getInfo(){
+    public void saveTheDocument(Documents document) {
+        if(counter < documents.length) {
+                documents[counter] = document;
+                counter++;
+            System.out.println("The document number " + counter + " created! ");
+        } else System.out.println("Error! Array is full!");
+    }
 
+    public void getInfo(int numberofDocument){
+        for (int i = 0; i < counter; i++) {
+            if (documents[i].getNumber() == numberofDocument) {
+                System.out.println("You chose this document: " + "\n" +
+                        documents[i]);
+                return;
+            }
+        }
+        System.out.println("Error! This document isn't created!");
     }
 }

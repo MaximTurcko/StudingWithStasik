@@ -4,15 +4,19 @@ import java.util.Date;
 
 public abstract class Documents {
     protected int number;
-    protected Date date;
+    protected Date date =  new Date();
     //Почему при создании пустого конструктора я
     // не могу инициализоировать final поля?
 
 
-    public Documents(int number, Date date) {
+    public Documents(int number) {
         this.number = number;
-        this.date = date;
     }
 
     public Documents(){}
+
+    public int getNumber(){
+        return number;
+    }
+    public abstract String toString();
 }
