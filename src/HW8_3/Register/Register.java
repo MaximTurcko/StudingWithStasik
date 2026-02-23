@@ -5,7 +5,7 @@ import HW8_3.Documents.Documents;
 import java.util.Date;
 
 public class Register implements IRegister {
-    public Documents[] documents = new Documents[10];
+    private Documents[] documents = new Documents[10];
     private int counter = 0;
 
     public Register(){
