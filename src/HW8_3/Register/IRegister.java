@@ -5,5 +5,5 @@ import HW8_3.Documents.Documents;
 public interface IRegister {
     void saveTheDocument(Documents documents);
 
-    void getInfo(int numberofDocument);
+    void getInfo(int numberОfDocument);
 }

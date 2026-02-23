@@ -1,9 +1,6 @@
 package HW8_3.Goods;
 
 import HW8_3.Documents.Documents;
-import HW8_3.Register.IRegister;
-
-import java.util.Date;
 
 public class Goods extends Documents  {
     private String tipe;
@@ -24,10 +21,5 @@ public class Goods extends Documents  {
                 "Tipe is: " + tipe + "\n" +
                 "Quantity is: " + quantity + "\n" +
                 "*******************************";
-    }
-
-
-    public String getInfo() {
-        return tipe + " " + quantity + " " + date + " " + number;
     }
 }

@@ -36,7 +36,7 @@ public class Main {
                 1003, 2043));
         goods1.saveTheDocument(new FinancialInvoice(11,
                 1003, 2043));
-        goods1.getInfo(10);
+        goods1.getInfo(5);
         goods1.getInfo(11);
     }
 }

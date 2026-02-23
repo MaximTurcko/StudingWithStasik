@@ -2,15 +2,11 @@ package HW8_3.Register;
 
 import HW8_3.Documents.Documents;
 
-import java.util.Date;
-
 public class Register implements IRegister {
     private Documents[] documents = new Documents[10];
     private int counter = 0;
 
-    public Register(){
-
-    }
+    public Register(){}
 
     public void saveTheDocument(Documents document) {
         if(counter < documents.length) {
@@ -20,9 +16,9 @@ public class Register implements IRegister {
         } else System.out.println("Error! Array is full!");
     }
 
-    public void getInfo(int numberofDocument){
+    public void getInfo(int numberОfDocument){
         for (int i = 0; i < counter; i++) {
-            if (documents[i].getNumber() == numberofDocument) {
+            if (documents[i].getNumber() == numberОfDocument) {
                 System.out.println("You chose this document: " + "\n" +
                         documents[i]);
                 return;
