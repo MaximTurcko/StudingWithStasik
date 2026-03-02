@@ -12,6 +12,7 @@ import HW9_1.Stuff.Stuff;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) throws AbcException, StartWith555Exception {
+        //Почему не просит передать EndWith1a2bException?
         Register goods1 = new Register();
         try {
             goods1.saveTheDocument(new Goods("55abc",
