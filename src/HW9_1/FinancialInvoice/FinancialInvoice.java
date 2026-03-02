@@ -1,14 +1,12 @@
-package HW8_3.FinancialInvoice;
+package HW9_1.FinancialInvoice;
 
-import HW8_3.Documents.Documents;
-
-import java.util.Date;
+import HW9_1.Documents.Documents;
 
 public class FinancialInvoice extends Documents {
     private int monthluTotal;
     private int departmentsCode;
 
-    public FinancialInvoice(int number, int monthluTotal, int departmentsCode) {
+    public FinancialInvoice(String number, int monthluTotal, int departmentsCode) {
         super(number);
         this.monthluTotal = monthluTotal;
         this.departmentsCode = departmentsCode;

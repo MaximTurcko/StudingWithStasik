@@ -1,12 +1,12 @@
-package HW8_3.Goods;
+package HW9_1.Goods;
 
-import HW8_3.Documents.Documents;
+import HW9_1.Documents.Documents;
 
 public class Goods extends Documents  {
     private String tipe;
     private int quantity;
 
-    public Goods(int number, String tipe, int quantity) {
+    public Goods(String number, String tipe, int quantity) {
         super(number);
         this.tipe = tipe;
         this.quantity = quantity;
