@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) throws AbcException, StartWith555Exception {
         Register goods1 = new Register();
         try {
-            goods1.saveTheDocument(new Goods("55a1a2b",
+            goods1.saveTheDocument(new Goods("55abc",
                     "sasd", 1));
             goods1.checkException();
         } catch (AbcException e) {

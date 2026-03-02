@@ -34,14 +34,19 @@ public class Register implements IRegister {
     public void checkException() throws AbcException, StartWith555Exception {
         if(documents[counter].getNumber().contains("abc")){
             throw new AbcException("Ошибка  Abc");
+            //Куда отправляются эти данные?
         } else System.out.println("You entered: " + documents[counter].getNumber() +
                 ". This number doesn't has 'abc'");
+
         if(documents[counter].getNumber().startsWith("555")){
             throw new StartWith555Exception("Ошибка  '555'");
+            //Куда отправляются эти данные?
         } else System.out.println("You entered: " + documents[counter].getNumber() +
                 ". This number doesn't begin with '555'");
+
         if(documents[counter].getNumber().endsWith("1a2b")){
             throw new EndWith1a2bException("Ошибка '1a2b'");
+            //Куда отправляются эти данные?
         } else System.out.println("You entered: " + documents[counter].getNumber() +
                 ". This number doesn't end with '1a2b'");
     }
