@@ -18,6 +18,7 @@ public class Register implements IRegister {
                 documents[counter] = document;
             System.out.println("The document number " + counter + " created! ");
         } else System.out.println("Error! Array is full!");
+
     }
 
     public void getInfo(String numberОfDocument){
@@ -31,12 +32,8 @@ public class Register implements IRegister {
         System.out.println("Error! This document isn't created!");
     }
 
-    public void checkException() throws AbcException, StartWith555Exception {
-        if(documents[counter].getNumber().contains("abc")){
-            throw new AbcException("Ошибка  Abc");
-            //Куда отправляются эти данные?
-        } else System.out.println("You entered: " + documents[counter].getNumber() +
-                ". This number doesn't has 'abc'");
+    public void checkException() throws StartWith555Exception, AbcException, EndWith1a2bException {
+
 
         if(documents[counter].getNumber().startsWith("555")){
             throw new StartWith555Exception("Ошибка  '555'");
@@ -49,5 +46,10 @@ public class Register implements IRegister {
             //Куда отправляются эти данные?
         } else System.out.println("You entered: " + documents[counter].getNumber() +
                 ". This number doesn't end with '1a2b'");
+        if(documents[counter].getNumber().contains("abc")){
+            throw new AbcException("Ошибка  Abc");
+            //Куда отправляются эти данные?
+        } else System.out.println("You entered: " + documents[counter].getNumber() +
+                ". This number doesn't has 'abc'");
     }
 }

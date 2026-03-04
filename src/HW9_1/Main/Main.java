@@ -11,17 +11,17 @@ import HW9_1.Stuff.Stuff;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) throws AbcException, StartWith555Exception {
+    public static void main(String[] args) throws  StartWith555Exception, EndWith1a2bException {
         //Почему не просит передать EndWith1a2bException?
         Register goods1 = new Register();
         try {
-            goods1.saveTheDocument(new Goods("55abc",
+            goods1.saveTheDocument(new Goods("abc324",
                     "sasd", 1));
             goods1.checkException();
         } catch (AbcException e) {
-            throw new AbcException("Все херня давай по новой");
+            System.out.println(e.getMessage());
         }  catch (StartWith555Exception e){
-            throw new StartWith555Exception("'555' Error!");
+           throw new StartWith555Exception("'555' Error!");
         } catch (EndWith1a2bException e){
             throw new EndWith1a2bException("'1a2b' Error!");
         }
