@@ -1,8 +1,8 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class HW10_1 {
     public static void main(String[] args) {
-        getBeginingWithLetters();
+        endWith1a2b();
     }
 
     public static void get2TheFirstBlocks(){
@@ -29,7 +29,19 @@ public class Main {
         System.out.println(d);
     }
 
+    public static void containsAbcABC(){
+        System.out.println(getNumber().matches(".*(?i)abc.*"));
+    }
+
+    public static void startWith555(){
+        System.out.println(getNumber().matches("^555.*"));
+    }
+
+    public static void endWith1a2b(){
+        System.out.println(getNumber().matches(".*1a2b$"));
+    }
+
     public static String getNumber(){
-        return "1545-etd-7864-jyf-7j3r";
+        return "5551-etd-7ABC-jyf-1a2b";
     }
 }
