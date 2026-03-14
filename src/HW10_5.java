@@ -5,8 +5,8 @@ public class HW10_5 {
         String c = ""; // текущий символ в строке
         for (int i = 0; i < line.length(); i++) { // обход строки
             c = String.valueOf(line.charAt(i)); // получить текущий символ
-                u.append(c);
-                u.append(c); // добавляем
+            u.append(c);
+            u.append(c); // добавляем
         }
         System.out.println(u);
     }
