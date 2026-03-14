@@ -18,8 +18,10 @@ public class HW10_4 {
         try{
             StringBuilder str = new StringBuilder(arrayWords[input - 1]);
             if (str.reverse().toString().equals(arrayWords[input - 1])) {
-                System.out.println("You chose: " + arrayWords[input - 1] + "\nThis word IS Poliadrom");
-            } else System.out.println("You chose: " + arrayWords[input - 1] + "\nThis word ISN'T Poliadrom");
+                System.out.println("You chose: " + arrayWords[input - 1] + "\n" +
+                        "This word IS Poliadrom");
+            } else System.out.println("You chose: " + arrayWords[input - 1] + "\n" +
+                    "This word ISN'T Poliadrom");
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Ты ввел херню!");
         }
