@@ -1,35 +1,35 @@
+package HW3;
 import java.util.Scanner;
 
-public class HW0 {
-
+public class HW3_1 {
     public static void main(String[] args) {
-        getDz3_1();
+        getTimeYear();
         //getDz3_2();
         //getDz3_3();
         //getDz3_4();
     }
 
 
-    public static void getDz3_1(){
+    public static void getTimeYear() {
         System.out.print("Please enter number time of year from 1 to 12: ");
         int month = input().nextInt();
         if (month == 12 || month == 1 || month == 2) {
             System.out.println("You entered " + month + ". Its winter");
-        } else if (month >=3 && month <=5){
+        } else if (month >= 3 && month <= 5) {
             System.out.println("You entered " + month + ". Its spring");
-        } else if (month >=6 && month <=8){
+        } else if (month >= 6 && month <= 8) {
             System.out.println("You entered " + month + ". Its summer");
-        } else if (month >=9 && month <=11){
+        } else if (month >= 9 && month <= 11) {
             System.out.println("You entered " + month + ". Its autumn");
         } else {
             System.out.println("Все херня! Давай по новой!");
         }
     }
 
-    public static void getDz3_2() {
+    public static void getTimeYearCase() {
         System.out.print("Please enter number time of year from 1 to 12: ");
         int month = input().nextInt();
-        switch (month){
+        switch (month) {
             case 12:
             case 1:
             case 2:
@@ -56,22 +56,22 @@ public class HW0 {
 
     }
 
-    public static void getDz3_3(){
+    public static void getRemainder () {
         System.out.println("Please enter your number. Ill show you your result: ");
         int number = input().nextInt();
-        int number1 = number%2;
-        if(number1 == 1){
+        int number1 = number % 2;
+        if (number1 == 1) {
             System.out.println("Остаток 1. Не четное");
         } else System.out.println("Остаток 0. Четное");
 
     }
 
-    public static void getDz3_4(){
+    public static void getTepm() {
         System.out.print("please enter temperature: ");
         int t = input().nextInt();
-        if ( t > -5) {
+        if (t > -5) {
             System.out.println("Тепло");
-        } else if (t <= -5 && t > -20){
+        } else if (t <= -5 && t > -20) {
             System.out.println("Нормально");
         } else if (t >= -20) {
             System.out.println("Холодно");
@@ -83,5 +83,4 @@ public class HW0 {
     }
 
 }
-
 
