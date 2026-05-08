@@ -6,6 +6,8 @@ public class Main {
                 500, "coolhdd", "ramtest", 16);
         System.out.println();
         Computer pc2 = new Computer(100499, "hernyaV1.1");
-
+        pc2.getInfo();
+        System.out.println("******************");
+        pc1.getInfo();
     }
 }

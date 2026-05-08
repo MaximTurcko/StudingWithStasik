@@ -22,4 +22,17 @@ public class Computer {
         this.ram = new RAM(ramName, ramValue);
         //System.out.println(ram.getValue());
     }
+
+    public void getInfo(){
+        System.out.println("This computer contains: \n" +
+                        "Cost: " + this.cost + "\n" +
+                        "Model: " + this.model + "\n" +
+                "HDD: " + this.hdd + "\n" +
+                "RAM: " + this.ram);
+        System.out.println("**********************");
+        hdd.getInfo();
+        System.out.println("**********************");
+        ram.getInfo();
+
+    }
 }

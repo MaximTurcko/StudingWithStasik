@@ -15,4 +15,10 @@ public class RAM {
                 ", Value RAM is: " + value);
     }
 
+    public void getInfo(){
+        System.out.println("This HDD consists: \n" +
+                "Name: " + this.name + "\n" +
+                "Value: " + this.value);
+    }
+
 }
