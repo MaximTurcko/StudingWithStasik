@@ -33,17 +33,27 @@ public class MyArrayList<T> {
 
     public void add(T t, int index) {
         if (array[index] != null) {
-            String[] newArray = new String[capasity + 1];
-            newArray[index] = t.toString();
-            for (int i = 0, o = 0; i < newArray.length; i++) {
-                if (newArray[i] == null) {
-                    newArray[i] = array[o];
+            if (this.size < capasity) {
+                for (int i = index + 1, o = index; i < array.length; i++) {
+                    String x = array[o];
+                    array[i] = x;
                     o++;
                 }
+                array[index] = t.toString();
+                size++;
+            } else {
+                this.capasity *= 1.5;
+                String[] newArray = new String[capasity];
+                newArray[index] = t.toString();
+                for (int i = 0, o = 0; i < array.length; i++) {
+                    if (newArray[i] == null) {
+                        newArray[i] = array[o];
+                        o++;
+                    }
+                }
+                this.array = newArray;
+                size++;
             }
-            array = newArray;
-            size++;
-            capasity++;
         } else if (this.size == index) add(t);
         else System.out.println("It's EMPTY. You can't to fill in this index!");
     }
@@ -63,20 +73,10 @@ public class MyArrayList<T> {
     public void remove(int index) {
         array[index] = null;
         if (size < capasity / 1.5) {
-            if(size < 13){
+            if (size < 10) {
                 this.capasity = 10;
-                String[] newArray = new String[capasity - 1];
-                for (int i = 0, o = 0; i < array.length; i++) {
-                    if (array[i] != null) {
-                        newArray[o] = array[i];
-                        o++;
-                    }
-                }
-                array = newArray;
-                size--;
-            }
-            this.capasity /= 1.5;
-            String[] newArray = new String[capasity - 1];
+            } else this.capasity /= 1.5;
+            String[] newArray = new String[capasity];
             for (int i = 0, o = 0; i < array.length; i++) {
                 if (array[i] != null) {
                     newArray[o] = array[i];

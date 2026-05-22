@@ -11,16 +11,17 @@ public class MyMain {
         array1.printFullArray();
 //      array1.printFullArray();
       array1.add(2,0);
-        array1.add(10,10);
+//        array1.add(11,10);
 
 //      array1.printFullArray();
 //      array1.remove(1);
-      array1.printFullArray();
-            array1.remove(10);
-        for (int i = 9; i >0 ; i--) {
-            array1.remove(i);
-        }
         System.out.println();
-        array1.printFullArray();
+      array1.printFullArray();
+//            array1.remove(10);
+//        for (int i = 9; i >0 ; i--) {
+//            array1.remove(i);
+//        }
+//        System.out.println();
+//        array1.printFullArray();
     }
 }

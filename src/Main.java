@@ -1,3 +1,4 @@
+import java.awt.datatransfer.StringSelection;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -5,24 +6,21 @@ import java.util.Arrays;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-//        ArrayList<Integer> numners = new ArrayList<>();
-        System.out.println(Arrays.toString(getTwoSum(new int[]{2, 3, 4, 7}, 11)));;
+        System.out.println(isPaliandrome(13));
     }
 
-    public static int[] getTwoSum(int[] nums, int target) {
-        int t1 = 0;
-        int t2 = 0;
-        for (int i = 0; i < nums.length; i++) {
-            for (int o = 0; o < nums.length; o++) {
-                if(nums[i] + nums[o] == target){
-                    if(i != o){
-                        t1 = o;
-                        t2 =i;
-                        break;
-                    }
-                }
+    public static boolean isPaliandrome(int x) {
+        StringBuilder str = new StringBuilder(Integer.toString(x));
+        System.out.println(str);
+//        if(str.reverse().toString().equals(Integer.toString(x))){
+//            return true;
+//        } else return false;
+        String y = str.reverse().toString();
+        for (int i = 0; i < str.length(); i++) {
+            if(y.charAt(i) != Integer.toString(x).charAt(i)){
+                return false;
             }
         }
-        return new int[] {t1, t2};
+        return true;
     }
 }
