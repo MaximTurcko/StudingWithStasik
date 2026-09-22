@@ -5,7 +5,7 @@ public abstract class Doctor {
     protected PlanOfHelp codeOfDoctor;
 
     public Doctor(String nameOfDoctor, int codeOfDoctor) {
-        this.nameOfDoctor  = nameOfDoctor;
+        this.nameOfDoctor = nameOfDoctor;
         this.codeOfDoctor = new PlanOfHelp(codeOfDoctor);
     }
 
